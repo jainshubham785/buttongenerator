@@ -1,38 +1,24 @@
-
-
-setInterval(DomChange, 1);
-
-
-function DomChange() {
-    const font = document.querySelector("#font").value;
-    const FontColor = document.querySelector("#Fcolor").value;
-    const BackColor = document.querySelector("#Bcolor").value;
-    const fontSize = document.querySelector("#fontSize").value;
-    const radius = document.querySelector("#radius").value;
-
-
-    // console.log(font);
-    // // console.log(radius);
-    // // console.log(BackColor);
-    document.querySelector("#FontColor").value = FontColor;
-    document.querySelector("#BackColor").value = BackColor;
-    document.querySelector("#fontValue").value = fontSize;
-    document.querySelector("#radiusValue").value = radius;
-
-
-
-    document.querySelector(".btn").style.fontFamily = font;
-    document.querySelector(".btn").style.color = FontColor;
-    document.querySelector(".btn").style.backgroundColor = BackColor;
-    document.querySelector(".btn").style.fontSize = fontSize+"px";
-    document.querySelector(".btn").style.borderRadius = radius+"px";
-
-    document.querySelector("#Cfont").textContent = font;
-    document.querySelector("#Ccolor").textContent = FontColor;
-    document.querySelector("#Cbcolor").textContent = BackColor;
-    document.querySelector("#Cfsize").textContent = fontSize;
-    document.querySelector("#Cbradius").textContent = radius;
-
-
-}
-
+function update_property(element) {
+    const form = element.form;
+    const display = document.querySelector(`#code-${element.name}`);
+    display.textContent = `${element.value}${element.getAttribute("data-unit")}`;
+  
+    const properties = {
+      fontFamily: form.fontFamily.value,
+      color: form.color.value,
+      backgroundColor: form.backgroundColor.value,
+      fontSize: form.fontSize.value + form.fontSize.getAttribute("data-unit"),
+      borderRadius: form.borderRadius.value + form.borderRadius.getAttribute("data-unit")
+    };
+    update_button(properties);
+  }
+  
+  function update_button(input) {
+    const ele = document.querySelector(".btn");
+    ele.style.fontFamily = input.fontFamily;
+    ele.style.color = input.color;
+    ele.style.backgroundColor = input.backgroundColor;
+    ele.style.fontSize = input.fontSize;
+    ele.style.borderRadius = input.borderRadius;
+  }
+  

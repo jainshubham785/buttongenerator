@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Document</title>
 </head>
+
 <body>
+
+
+  <header>
     <h1>Button Generator</h1>
+  </header>
+
+
+
+  <main>
 
     <div class="container">
-        <div class="values">
+      <div class="upper">
+        <div class="properties">
+          <form id="input_form" name="input_form">
             <label for="font">Font</label> :
-            <select name="font" id="font">
-                <option value="Arial">Arial</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Calibri">Calibri</option>
-                <option value="Futura">Futura</option>
-                <option value="Garamond">Garamond</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Cambria">Cambria</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Rockwell">Rockwell</option>
-
-            </select><br>
-
-            <label for="color">Font Color</label> : 
-            <input type="text" id="FontColor" value="#ffffff">
-            <input type="color" value="#ffffff" id="Fcolor"> <br>
-
-            <label for="Bcolor">Background Color</label> : 
-            <input type="text" id="BackColor" value="#3498db">
-            <input type="color" value="#3498db" id="Bcolor"> <br>
-
+            <select name="fontFamily" id="font" data-unit="" oninput="update_property(this)">
+              <option value="Arial">Arial</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Calibri">Calibri</option>
+              <option value="Futura">Futura</option>
+              <option value="Garamond">Garamond</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Cambria">Cambria</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Rockwell">Rockwell</option>
+            </select><br />
+      
+            <label for="color">Font Color</label> :
+            <input type="text" id="FontColor" value="#ffffff" />
+            <input type="color" value="#ffffff" id="color" data-unit="" name="color" oninput="update_property(this)" />
+            <br />
+      
+            <label for="Bcolor">Background Color</label> :
+            <input type="text" id="BackColor" value="#3498db" />
+            <input type="color" value="#3498db" id="Bcolor" data-unit="" name="backgroundColor"
+              oninput="update_property(this)" />
+            <br />
+      
             <label for="font Size">font Size</label> :
-            <input type="text" id="fontValue" value="50">
-            <input type="range" min="0" max="100" value="50" id="fontSize"> <br>
-
+            <input type="text" id="fontValue" value="50" name="fontValue" />
+            <input type="range" min="0" max="100" value="50" data-unit="px" id="fontSize" name="fontSize"
+              oninput="update_property(this)" />
+            <br />
+      
             <label for="Radius">Border Radius</label> :
-            <input type="text" id="radiusValue" value="30">
-            <input type="range" min="0" max="60" value="30" id="radius"> <br>
-
-            <!-- <button onclick="DomChange()">Apply changes</button> -->
-
+            <input type="text" value="30" />
+            <input type="range" min="0" max="60" value="30" data-unit="px" id="radius" name="borderRadius"
+              oninput="update_property(this)" />
+            <br />
+          </form>
         </div>
-
+      </div>
+      
+      <div class="lower">
+        <div class="code">
+          <h3>Code</h3>
+          <p>
+            font-family: <span id="code-fontFamily">Arial</span>;<br />
+            color: <span id="code-color">#ffffff</span>;<br />
+            background: <span id="code-backgroundColor">#3498db</span>;<br />
+            font-size: <span id="code-fontSize">50px</span>;<br />
+            border-radius: <span id="code-borderRadius">30px</span>;
+          </p>
+        </div>
         <div class="preview">
-            <button class="btn">Click Me</button>
+          <button class="btn">Click Me</button>
         </div>
-
+      
+        
+      </div>
     </div>
+    
+
+  </main>
 
 
-    <div>
-        <h3>Code</h3>
-        <p>
-            font-family: <span id="Cfont">Arial</span>;<br>
-            color: <span id="Ccolor">#ffffff</span>;<br>
-            background: <span id="Cbcolor">#3498db</span>;<br>
-            font-size: <span id="Cfsize">50</span>px;<br>
-            border-radius: <span id="Cbradius">30</span>px;
-        </p>
-    </div>
+
+  <footer>
+    <p>Copyright shubham</p>
+  </footer>
+
+
 </body>
 <script src="./index.js"></script>
+
 </html>
