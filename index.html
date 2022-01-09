@@ -21,148 +21,141 @@
     <main>
 
         <div class="container">
-            <div class="upper">
+            <div class="left">
                 <div>
                     <form id="input_form" name="input_form">
                         <div class="properties">
-                            <div>
-                                <ul>
-                                    <li><label for="font">Font</label> :
-                                        <select name="fontFamily" id="font" data-unit=""
-                                            oninput="update_property(this)">
-                                            <option value="Arial">Arial</option>
-                                            <option value="Georgia">Georgia</option>
-                                            <option value="Courier New">Courier New</option>
-                                            <option value="Helvetica">Helvetica</option>
-                                            <option value="Calibri">Calibri</option>
-                                            <option value="Futura">Futura</option>
-                                            <option value="Garamond">Garamond</option>
-                                            <option value="Times New Roman">Times New Roman</option>
-                                            <option value="Cambria">Cambria</option>
-                                            <option value="Verdana">Verdana</option>
-                                            <option value="Rockwell">Rockwell</option>
-                                        </select>
-                                    </li>
-                                    <li><label for="color">Font Color</label> :
-                                        <input type="color" value="#ffffff" id="color" data-unit="" name="color"
-                                            oninput="update_property(this)" />
-                                    </li>
-                                    <li><label for="font Size">font Size</label> :
-                                        <input type="range" min="0" max="100" value="50" data-unit="px" id="fontSize"
-                                            name="fontSize" oninput="update_property(this)" />
-                                    </li>
-                                    <li><label for="padding_tb">padding top-bottom</label> :
-                                        <input type="range" min="0" max="30" value="5" data-unit="px" id="padding_tb"
-                                            name="padding_tb" oninput="update_property(this)">
-                                    </li>
-                                    <li><label for="padding_lr">padding left-right</label> :
-                                        <input type="range" min="0" max="30" value="5" data-unit="px" id="padding_lr"
-                                            name="padding_lr" oninput="update_property(this)">
-                                    </li>
-                                    <li>
-                                        <label for="Bcolor">Background Color</label> :
-                                        <input type="color" value="#3498db" id="Bcolor" data-unit=""
-                                            name="backgroundColor" oninput="update_property(this)" />
-                                    </li>
 
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li><label for="borderStyle">Border</label> :
-                                        <input type="color" value="#000000" id="borderColor" name="borderColor"
-                                            data-unit="" oninput="update_property(this)">
-                                    </li>
-                                    <li><label for="borderType">Border Style</label> :
-                                        <select name="borderStyle" id="borderStyle" value="solid" data-unit=""
-                                            oninput="update_property(this)">
-                                            <option value="solid">Solid</option>
-                                            <option value="dotted">Dotted</option>
-                                        </select>
-                                    </li>
-                                    <li><label for="borderWidth">width</label> :
-                                        <input type="range" min="0" max="10" value="0" name="borderWidth" data-unit="px"
-                                            id="borderWidth" oninput="update_property(this)">
-                                    </li>
-                                    <li><label for="Radius">Border Radius</label> :
-                                        <input type="range" min="0" max="100" value="30" data-unit="px" id="radius"
-                                            name="borderRadius" oninput="update_property(this)" />
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li class="prop_title">Text Shadow</li>
-                                    <li><label for="textShadow">Color</label> :
-                                        <input type="color" value="#3498db" data-unit="" id="textShadow_color"
-                                            name="textShadow_color" oninput="update_property(this)">
-                                    </li>
-                                    <li> <label for="X_axis">X-axis</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px"
-                                            name="textShadow_x" id="textShadow_x" oninput="update_property(this)">
-                                    </li>
-                                    <li><label for="Y_axis">Y-axis</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px"
-                                            name="textShadow_y" id="textShadow_y" oninput="update_property(this)">
-                                    </li>
-                                    <li> <label for="blur">Blur</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px"
-                                            name="textShadow_blur" id="textShadow_blur" oninput="update_property(this)">
-                                    </li>
-                                    <li class="prop_title">Box Shadow</li>
-                                    <li> <label for="boxShadow"> Color</label> :
-                                        <input type="color" value="#3498db" data-unit="" id="boxShadow_color"
-                                            name="boxShadow_color" oninput="update_property(this)">
-                                    </li>
-                                    <li> <label for="X_axis">X-axis</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px" name="boxShadow_x"
-                                            id="boxShadow_x" oninput="update_property(this)">
-                                    </li>
-                                    <li> <label for="Y_axis">Y-axis</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px" name="boxShadow_y"
-                                            id="boxShadow_y" oninput="update_property(this)">
-                                    </li>
-                                    <li> <label for="blur">Blur</label> :
-                                        <input type="range" min="0" max="30" value="0" data-unit="px"
-                                            name="boxShadow_blur" id="boxShadow_blur" oninput="update_property(this)">
-                                    </li>
+                            <ul>
+                                <li><label for="font">Font</label> :
+                                    <select name="fontFamily" id="font" data-unit="" oninput="update_property(this)">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Helvetica">Helvetica</option>
+                                        <option value="Calibri">Calibri</option>
+                                        <option value="Futura">Futura</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Cambria">Cambria</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Rockwell">Rockwell</option>
+                                    </select>
+                                </li>
+                                <li><label for="color">Font Color</label> :
+                                    <input type="color" value="#ffffff" id="color" data-unit="" name="color"
+                                        oninput="update_property(this)" />
+                                </li>
+                                <li><label for="font Size">font Size</label> :
+                                    <input type="range" min="0" max="80" value="40" data-unit="px" id="fontSize"
+                                        name="fontSize" oninput="update_property(this)" />
+                                </li>
+                                <li><label for="padding_tb">padding top-bottom</label> :
+                                    <input type="range" min="0" max="30" value="5" data-unit="px" id="padding_tb"
+                                        name="padding_tb" oninput="update_property(this)">
+                                </li>
+                                <li><label for="padding_lr">padding left-right</label> :
+                                    <input type="range" min="0" max="30" value="5" data-unit="px" id="padding_lr"
+                                        name="padding_lr" oninput="update_property(this)">
+                                </li>
+                                <li>
+                                    <label for="Bcolor">Background Color</label> :
+                                    <input type="color" value="#3498db" id="Bcolor" data-unit="" name="backgroundColor"
+                                        oninput="update_property(this)" />
+                                </li>
 
-                                </ul>
-                            </div>
-                            
+
+                                <li><label for="borderStyle">Border</label> :
+                                    <input type="color" value="#000000" id="borderColor" name="borderColor" data-unit=""
+                                        oninput="update_property(this)">
+                                </li>
+                                <li><label for="borderType">Border Style</label> :
+                                    <select name="borderStyle" id="borderStyle" value="solid" data-unit=""
+                                        oninput="update_property(this)">
+                                        <option value="solid">Solid</option>
+                                        <option value="dotted">Dotted</option>
+                                    </select>
+                                </li>
+                                <li><label for="borderWidth">width</label> :
+                                    <input type="range" min="0" max="10" value="0" name="borderWidth" data-unit="px"
+                                        id="borderWidth" oninput="update_property(this)">
+                                </li>
+                                <li><label for="Radius">Border Radius</label> :
+                                    <input type="range" min="0" max="100" value="30" data-unit="px" id="radius"
+                                        name="borderRadius" oninput="update_property(this)" />
+                                </li>
+
+
+                                <li class="prop_title">Text Shadow</li>
+                                <li><label for="textShadow">Color</label> :
+                                    <input type="color" value="#3498db" data-unit="" id="textShadow_color"
+                                        name="textShadow_color" oninput="update_property(this)">
+                                </li>
+                                <li> <label for="X_axis">X-axis</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="textShadow_x"
+                                        id="textShadow_x" oninput="update_property(this)">
+                                </li>
+                                <li><label for="Y_axis">Y-axis</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="textShadow_y"
+                                        id="textShadow_y" oninput="update_property(this)">
+                                </li>
+                                <li> <label for="blur">Blur</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="textShadow_blur"
+                                        id="textShadow_blur" oninput="update_property(this)">
+                                </li>
+                                <li class="prop_title">Box Shadow</li>
+                                <li> <label for="boxShadow"> Color</label> :
+                                    <input type="color" value="#3498db" data-unit="" id="boxShadow_color"
+                                        name="boxShadow_color" oninput="update_property(this)">
+                                </li>
+                                <li> <label for="X_axis">X-axis</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="boxShadow_x"
+                                        id="boxShadow_x" oninput="update_property(this)">
+                                </li>
+                                <li> <label for="Y_axis">Y-axis</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="boxShadow_y"
+                                        id="boxShadow_y" oninput="update_property(this)">
+                                </li>
+                                <li> <label for="blur">Blur</label> :
+                                    <input type="range" min="0" max="30" value="0" data-unit="px" name="boxShadow_blur"
+                                        id="boxShadow_blur" oninput="update_property(this)">
+                                </li>
+
+                            </ul>
+
+
                         </div>
                     </form>
                 </div>
             </div>
 
-            <div class="lower">
+            <div class="right">
                 <div class="code">
-                    <h3>Code</h3>
-                    <p>
-                        font-family: <span id="code-fontFamily">Arial</span>;<br />
-                        color: <span id="code-color">#ffffff</span>;<br />
-                        font-size: <span id="code-fontSize">50px</span>;<br />
-                        Padding: <span id="code-padding_tb">5px</span> <span id="code-padding_lr">5px</span>;<br>
-
-                        background: <span id="code-backgroundColor">#3498db</span>;<br />
-                        border-radius: <span id="code-borderRadius">30px</span>; <br>
-                        text-shadow: <span id="code-textShadow_x">0px</span> <span id="code-textShadow_y">0px</span>
-                        <span id="code-textShadow_blur">0px</span> <span id="code-textShadow_color">#3498db</span>; <br>
-                        box-shadow: <span id="code-boxShadow_x">0px</span> <span id="code-boxShadow_y">0px</span> <span
-                            id="code-boxShadow_blur">0px</span> <span id="code-boxShadow_color">#3498db</span>; <br>
-                        border: <span id="code-borderStyle">solid</span> <span id="code-borderWidth">0px</span> <span
-                            id="code-borderColor">#000000</span>;
-                    </p>
+                    <!-- <h3>Code</h3> -->
+                    <ul>
+                        <li class="prop_title">CSS Code</li>
+                        <li>font-family: <span id="code-fontFamily">Arial</span>;</li>
+                        <li>color: <span id="code-color">#ffffff</span>;</li>
+                        <li>font-size: <span id="code-fontSize">50px</span>;</li>
+                        <li>Padding: <span id="code-padding_tb">5px</span> <span id="code-padding_lr">5px</span>;</li>
+                        <li>background: <span id="code-backgroundColor">#3498db</span>;</li>
+                        <li>border: <span id="code-borderStyle">solid</span> <span id="code-borderWidth">0px</span>
+                            <span id="code-borderColor">#000000</span>;
+                        </li>
+                        <li>border-radius: <span id="code-borderRadius">30px</span>;</li>
+                        <li>text-shadow: <span id="code-textShadow_x">0px</span> <span id="code-textShadow_y">0px</span>
+                            <span id="code-textShadow_blur">0px</span> <span id="code-textShadow_color">#3498db</span>;
+                        </li>
+                        <li> box-shadow: <span id="code-boxShadow_x">0px</span> <span id="code-boxShadow_y">0px</span>
+                            <span id="code-boxShadow_blur">0px</span> <span id="code-boxShadow_color">#3498db</span>;
+                        </li>
+                    </ul>
                 </div>
                 <div class="preview">
                     <button class="btn">Click Me</button>
                 </div>
-
-
             </div>
         </div>
-
 
     </main>
 
