@@ -38,7 +38,6 @@ header {
   padding: 20px;
 }
 
-
 .right {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -86,4 +85,18 @@ ul {
 }
 .code span {
   color: aqua;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background: #298f3e; /* fallback for old browsers */
+    background: linear-gradient(90deg, #298f3e, #6572ba);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    margin-bottom: 30px;
+  }
 }
