@@ -2,23 +2,24 @@
 
 # Font/text
 text
-font-family
-font-color
-font-size
-text-shadow
+font-family @
+font-color @
+font-size @
+text-shadow @
 
 # Box
-box-shadow
-padding
+box-shadow @
+padding @
 
 # Border
-border radius
+border radius @
 border(color, style, width)
 
 # background
-background-color
+background-color @
 
 # Hower
 background-color
+
 
 
